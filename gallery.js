@@ -244,5 +244,3 @@ window.onload = () => {
     document.body.style.transition = "opacity 2s";
     document.body.style.opacity = "1";
 };
-
-};  
