@@ -1,0 +1,123 @@
+
+/* ======================================
+   FINAL ENDING PAGE DESIGN ❤️✨
+   ====================================== */
+
+
+body{
+
+    margin:0;
+    padding:0;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(135deg,#ffb6d9,#bde0ff);
+
+    font-family:Arial,sans-serif;
+
+    overflow:hidden;
+
+}
+
+
+.ending-container{
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+
+h1{
+
+    color:#ff1493;
+
+    font-size:45px;
+
+    text-shadow:
+    0 0 10px white,
+    0 0 20px pink;
+
+    animation:titleGlow 2s infinite;
+
+}
+
+
+
+@keyframes titleGlow{
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+
+
+.heart{
+
+    font-size:100px;
+
+    animation:heartBeat 1.5s infinite;
+
+}
+
+
+
+@keyframes heartBeat{
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+}
+
+
+
+#finalMessage{
+
+    max-width:600px;
+
+    margin:30px auto;
+
+    font-size:22px;
+
+    line-height:1.6;
+
+    color:#7a0050;
+
+}
+
+
+
+button{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:
+    linear-gradient(135deg,#ffd700,#fff3a0);
+
+    color:#5a0000;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 0 20px gold;
+
+}

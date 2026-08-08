@@ -1,0 +1,445 @@
+/* ===========================
+   ROYAL CINEMATIC LOGIN PAGE
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,#7d001b,#3b000d,#150005);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+}
+
+/* Main Container */
+
+.main-container{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* Login Card */
+
+.login-box{
+
+    width:420px;
+
+    padding:40px;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(10px);
+
+    border:2px solid gold;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:
+    0 0 25px gold,
+    0 0 50px rgba(255,215,0,.4);
+
+    z-index:10;
+
+}
+
+/* Title */
+
+.title{
+
+    color:gold;
+
+    font-size:42px;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:15px;
+
+    text-shadow:0 0 12px gold;
+
+}
+
+.subtitle{
+
+    color:white;
+
+    margin-bottom:30px;
+
+    letter-spacing:1px;
+
+}
+/* Input Fields */
+
+.login-box input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin:12px 0;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:40px;
+
+    font-size:16px;
+
+    color:white;
+
+    background:rgba(255,255,255,.10);
+
+    border:2px solid rgba(255,215,0,.6);
+
+    transition:.4s;
+
+}
+
+.login-box input::placeholder{
+
+    color:#f5e6b8;
+
+}
+
+.login-box input:focus{
+
+    border-color:gold;
+
+    box-shadow:0 0 18px gold;
+
+}
+
+/* Golden Button */
+
+.login-box button{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:25px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#4b0000;
+
+    background:linear-gradient(135deg,#FFD700,#FFF4A3,#D4AF37);
+
+    transition:.4s;
+
+    box-shadow:0 0 20px gold;
+
+}
+
+.login-box button:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 35px gold;
+
+}
+/* ===========================
+   FLOATING EFFECTS
+=========================== */
+
+#hearts,
+#stars,
+#sparkles,
+#roses,
+#balloons{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+/* Golden Frame */
+
+.gold-frame{
+
+    position:fixed;
+
+    background:gold;
+
+    box-shadow:0 0 20px gold;
+
+    z-index:15;
+
+}
+
+.top{
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+}
+
+.bottom{
+
+    bottom:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+}
+
+.left{
+
+    top:0;
+    left:0;
+
+    width:5px;
+    height:100%;
+
+}
+
+.right{
+
+    top:0;
+    right:0;
+
+    width:5px;
+    height:100%;
+
+}
+
+/* Footer */
+
+.footer-text{
+
+    position:fixed;
+
+    bottom:20px;
+
+    width:100%;
+
+    text-align:center;
+
+    color:#FFD700;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    text-shadow:0 0 10px gold;
+
+    z-index:20;
+
+}
+Login.css
+/* ===========================
+   ANIMATION STYLES
+=========================== */
+
+/* Hearts */
+
+.heart{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    color:#FFD700;
+
+    animation:heartFloat linear infinite;
+
+    opacity:.9;
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+
+        transform:translateY(0) rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* Stars */
+
+.star{
+
+    position:absolute;
+
+    top:-40px;
+
+    color:#FFF5B8;
+
+    animation:starFall linear infinite;
+
+    text-shadow:0 0 12px gold;
+
+}
+
+@keyframes starFall{
+
+    from{
+
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        transform:translateY(120vh);
+
+    }
+
+}
+
+/* Roses */
+
+.rose{
+
+    position:absolute;
+
+    top:-60px;
+
+    animation:roseFall linear infinite;
+
+}
+
+@keyframes roseFall{
+
+    0%{
+
+        transform:translateY(0) rotate(0deg);
+
+    }
+
+    100%{
+
+        transform:translateY(120vh) rotate(360deg);
+
+    }
+
+}
+
+/* Balloons */
+
+.balloon{
+
+    position:absolute;
+
+    bottom:-80px;
+
+    animation:balloonFly linear infinite;
+
+}
+
+@keyframes balloonFly{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-140vh);
+
+    }
+
+}
+
+/* Sparkles */
+
+.sparkle{
+
+    position:absolute;
+
+    color:gold;
+
+    animation:sparkGlow 2s infinite alternate;
+
+}
+
+@keyframes sparkGlow{
+
+    from{
+
+        opacity:.2;
+
+        transform:scale(.6);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1.3);
+
+        text-shadow:0 0 15px gold;
+
+    }
+
+}

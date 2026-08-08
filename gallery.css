@@ -1,0 +1,352 @@
+
+/* =====================================
+   GRAND CINEMATIC GALLERY
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,#8B0000,#4A0000,#180000);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+.gallery-container{
+
+    width:90%;
+
+    max-width:1000px;
+
+    text-align:center;
+
+    z-index:10;
+
+}
+
+.gallery-title{
+
+    color:gold;
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+    font-family:'Cinzel',serif;
+
+    text-shadow:
+    0 0 15px gold,
+    0 0 35px gold;
+
+}
+
+.slideshow{
+
+    width:330px;
+
+    height:560px;
+
+    margin:auto;
+
+    border:6px solid gold;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    background:black;
+
+    box-shadow:
+    0 0 25px gold,
+    0 0 60px rgba(255,215,0,.4);
+
+}
+
+.slideshow img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+    oblect-position:center;
+    
+    transition:1s;
+
+}
+
+.quote-box{
+
+    width:80%;
+
+    margin:30px auto;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+
+    border:2px solid gold;
+
+    color:white;
+
+    font-size:20px;
+
+    backdrop-filter:blur(8px);
+
+}
+
+.progress-container{
+
+    width:80%;
+
+    height:12px;
+
+    background:#ffffff22;
+
+    margin:25px auto;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+#progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(to right,gold,#fff4a3);
+
+}
+
+.counter{
+
+    color:gold;
+
+    font-size:22px;
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+}
+/* =====================================
+   FLOATING PREMIUM EFFECTS
+===================================== */
+
+/* Hearts */
+
+.heart{
+
+    position:absolute;
+
+    bottom:-60px;
+
+    color:#FFD700;
+
+    animation:heartFloat linear infinite;
+
+    opacity:.9;
+
+}
+
+@keyframes heartFloat{
+
+    from{
+
+        transform:translateY(0) rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-130vh) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* Stars */
+
+.star{
+
+    position:absolute;
+
+    top:-40px;
+
+    color:#FFF7AE;
+
+    text-shadow:0 0 15px gold;
+
+    animation:starFall linear infinite;
+
+}
+
+@keyframes starFall{
+
+    from{
+
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        transform:translateY(120vh);
+
+    }
+
+}
+
+/* Roses */
+
+.rose{
+
+    position:absolute;
+
+    top:-60px;
+
+    animation:roseFall linear infinite;
+
+}
+
+@keyframes roseFall{
+
+    from{
+
+        transform:translateY(-20px) rotate(0deg);
+
+    }
+
+    to{
+
+        transform:translateY(120vh) rotate(360deg);
+
+    }
+
+}
+
+/* Balloons */
+
+.balloon{
+
+    position:absolute;
+
+    bottom:-80px;
+
+    animation:balloonFly linear infinite;
+
+}
+
+@keyframes balloonFly{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-140vh);
+
+    }
+
+}
+
+/* Sparkles */
+
+.sparkle{
+
+    position:absolute;
+
+    color:gold;
+
+    animation:sparkGlow 2s infinite alternate;
+
+}
+
+@keyframes sparkGlow{
+
+    from{
+
+        opacity:.3;
+
+        transform:scale(.6);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1.4);
+
+        text-shadow:0 0 18px gold;
+
+    }
+
+}
+
+/* Photo Animation */
+
+.slideshow img{
+
+    animation:photoZoom 6s ease-in-out infinite;
+
+}
+
+@keyframes photoZoom{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.06);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}

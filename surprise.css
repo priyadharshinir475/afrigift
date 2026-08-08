@@ -1,0 +1,337 @@
+
+/* =====================================
+   GRAND SURPRISE LETTER
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,#8B0000,#4A0000,#180000);
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:900px;
+
+    text-align:center;
+
+    z-index:10;
+
+}
+
+.title{
+
+    color:gold;
+
+    font-size:42px;
+
+    margin-bottom:40px;
+
+    font-family:'Cinzel',serif;
+
+    text-shadow:
+    0 0 15px gold,
+    0 0 35px gold;
+
+}
+
+#openBtn{
+
+    padding:18px 45px;
+
+    font-size:22px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    background:linear-gradient(135deg,#FFD700,#FFF3A0,#C9A227);
+
+    color:#5A0000;
+
+    font-weight:bold;
+
+    box-shadow:
+    0 0 20px gold;
+
+    transition:.4s;
+
+}
+
+#openBtn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 35px gold;
+
+}
+
+#letter{
+
+    margin-top:40px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    border:3px solid gold;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    color:white;
+
+    line-height:2;
+
+    box-shadow:
+    0 0 30px rgba(255,215,0,.4);
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+/* =====================================
+   PREMIUM FLOATING EFFECTS
+===================================== */
+
+#hearts,
+#stars,
+#sparkles,
+#roses,
+#balloons{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+/* Hearts */
+
+.heart{
+
+    position:absolute;
+
+    bottom:-60px;
+
+    color:#FFD700;
+
+    animation:heartFloat linear infinite;
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+
+        transform:translateY(0) rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* Stars */
+
+.star{
+
+    position:absolute;
+
+    top:-40px;
+
+    color:#FFF5A8;
+
+    text-shadow:0 0 15px gold;
+
+    animation:starFall linear infinite;
+
+}
+
+@keyframes starFall{
+
+    from{
+
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        transform:translateY(120vh);
+
+    }
+
+}
+
+/* Roses */
+
+.rose{
+
+    position:absolute;
+
+    top:-60px;
+
+    animation:roseFall linear infinite;
+
+}
+
+@keyframes roseFall{
+
+    from{
+
+        transform:translateY(-20px) rotate(0deg);
+
+    }
+
+    to{
+
+        transform:translateY(120vh) rotate(360deg);
+
+    }
+
+}
+
+/* Balloons */
+
+.balloon{
+
+    position:absolute;
+
+    bottom:-80px;
+
+    animation:balloonFly linear infinite;
+
+}
+
+@keyframes balloonFly{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-140vh);
+
+    }
+
+}
+
+/* Sparkles */
+
+.sparkle{
+
+    position:absolute;
+
+    color:gold;
+
+    animation:sparkGlow 2s infinite alternate;
+
+}
+
+@keyframes sparkGlow{
+
+    from{
+
+        opacity:.3;
+
+        transform:scale(.7);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1.4);
+
+        text-shadow:0 0 18px gold;
+
+    }
+
+}
+
+/* Letter Animation */
+
+#letter{
+
+    animation:fadeLetter 1.5s ease;
+
+}
+
+@keyframes fadeLetter{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

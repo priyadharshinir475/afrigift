@@ -1,0 +1,132 @@
+
+/* ======================================
+   3D GRAND CAKE DESIGN
+   ====================================== */
+
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffc1e3,#bde0ff);
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+}
+
+
+.cake-container{
+    text-align:center;
+}
+
+
+h1{
+    color:#ff1493;
+    font-size:40px;
+    text-shadow:0 0 15px white;
+    animation:glow 2s infinite;
+}
+
+
+@keyframes glow{
+
+    50%{
+        transform:scale(1.05);
+    }
+
+}
+
+
+/* Cake */
+
+.cake{
+    position:relative;
+    width:250px;
+    height:220px;
+    margin:40px auto;
+}
+
+
+/* Bottom layer */
+
+.bottom{
+    position:absolute;
+    bottom:0;
+    width:250px;
+    height:80px;
+    background:linear-gradient(#ff8fcf,#ff4fa3);
+    border-radius:20px;
+    box-shadow:0 15px 25px #999;
+}
+
+
+/* Middle layer */
+
+.middle{
+    position:absolute;
+    bottom:70px;
+    left:25px;
+    width:200px;
+    height:60px;
+    background:linear-gradient(#fff,#ffd1e8);
+    border-radius:20px;
+}
+
+
+/* Top layer */
+
+.top{
+    position:absolute;
+    bottom:120px;
+    left:50px;
+    width:150px;
+    height:50px;
+    background:linear-gradient(#ff69b4,#ff1493);
+    border-radius:20px;
+}
+
+
+/* Candle */
+
+.candle{
+    position:absolute;
+    top:-45px;
+    left:105px;
+    font-size:45px;
+    cursor:pointer;
+    animation:candleMove 1s infinite alternate;
+}
+
+
+@keyframes candleMove{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-10px);
+    }
+
+}
+
+
+/* Text */
+
+#wish{
+    font-size:22px;
+    color:#8b005d;
+}
+
+
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(135deg,#ffd700,#fff3a0);
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 20px gold;
+}
