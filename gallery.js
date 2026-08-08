@@ -86,10 +86,8 @@ setInterval(() => {
     current++;
 
     if (current >= photos.length) {
-
-        window.location.href = "surprise.html";
-
-        return;
+        current=0;
+      
     }
 
     showPhoto();
